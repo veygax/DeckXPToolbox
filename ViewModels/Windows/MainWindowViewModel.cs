@@ -6,7 +6,7 @@ namespace DeckXPToolbox.ViewModels.Windows
     public partial class MainWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        private string _applicationTitle = "WPF UI - DeckXPToolbox";
+        private string _applicationTitle = "DeckXP";
 
         [ObservableProperty]
         private ObservableCollection<object> _menuItems = new()
@@ -19,9 +19,9 @@ namespace DeckXPToolbox.ViewModels.Windows
             },
             new NavigationViewItem()
             {
-                Content = "Data",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
-                TargetPageType = typeof(Views.Pages.DataPage)
+                Content = "Install",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.ArrowDownload24 },
+                TargetPageType = typeof(Views.Pages.InstallPage)
             }
         };
 

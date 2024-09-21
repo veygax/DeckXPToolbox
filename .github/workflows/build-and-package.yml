@@ -1,0 +1,44 @@
+name: Build and Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 8.0
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Publish
+      run: dotnet publish -c Release -o ./publish
+
+    - name: Install NSIS
+      run: sudo apt-get update && sudo apt-get install -y nsis
+
+    - name: Build NSIS Installer
+      run: |
+        makensis installer.nsi
+
+    - name: Upload NSIS installer artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: nsis-installer
+        path: DeckXPToolbox-setup.exe

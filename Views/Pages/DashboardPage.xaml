@@ -17,12 +17,31 @@
     mc:Ignorable="d">
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-            <ui:Image CornerRadius="4" BorderBrush="#33000000" Height="100" Width="100" Source="/Assets/wpfui-icon-1024.png" />
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10,0,0,0">
-                <ui:TextBlock Text="Welcome to" VerticalAlignment="Center" FontFamily="Arial" FontSize="15" FontWeight="Normal" />
-                <ui:TextBlock Text="DeckXP" VerticalAlignment="Center" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" />
-            </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Image and GitHub Button in the first column -->
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Increase image size -->
+            <ui:Image CornerRadius="4" BorderBrush="#33000000" Height="150" Width="150" Source="/Assets/deckxp-icon-1024.png" />
+            <!-- Make the GitHub button bigger -->
+            <Button Content="GitHub" FontSize="18" Height="60" Width="100" HorizontalAlignment="Center" Margin="0,15,0,0" Padding="15,10" Click="GitHubButton_Click" />
+        </StackPanel>
+
+        <!-- TextBlocks and Discord Button in the second column -->
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0">
+            <!-- Increase the size of the text block area -->
+            <Border Width="150" Height="150" BorderThickness="0">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <!-- Increase the font size for the text blocks -->
+                    <ui:TextBlock Text="Welcome to" FontFamily="Arial" FontSize="22" FontWeight="Normal" HorizontalAlignment="Center" />
+                    <ui:TextBlock Text="DeckXP" FontFamily="Arial Black" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" />
+                </StackPanel>
+            </Border>
+            <!-- Make the Discord button bigger -->
+            <Button Content="Discord" FontSize="18" Height="60" Width="100" HorizontalAlignment="Center" Margin="0,15,0,0" Padding="15,10" Click="DiscordButton_Click" />
         </StackPanel>
     </Grid>
 </Page>

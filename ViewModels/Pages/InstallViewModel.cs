@@ -4,7 +4,7 @@ using Wpf.Ui.Controls;
 
 namespace DeckXPToolbox.ViewModels.Pages
 {
-    public partial class DataViewModel : ObservableObject, INavigationAware
+    public partial class InstallViewModel : ObservableObject, INavigationAware
     {
         private bool _isInitialized = false;
 
