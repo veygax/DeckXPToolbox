@@ -8,8 +8,6 @@ RequestExecutionLevel admin
 
 Icon "deckxp-icon.ico"
 
-SetOutPath "$INSTDIR"
-
 File /r "publish\*.*"
 
 File "deckxp-icon.ico"
