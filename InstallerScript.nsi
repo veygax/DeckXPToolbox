@@ -17,7 +17,7 @@ Section "Install"
   CreateShortcut "$DESKTOP\DeckXP.lnk" "$INSTDIR\DeckXPToolbox.exe" "" "$INSTDIR\deckxp-icon.ico"
 
   CreateDirectory "$SMPROGRAMS\DeckXP"
-  CreateShortcut "$SMPROGRAMS\DeckXP\DeckXP.lnk" "$INSTDIR\DeckXP.exe" "" "$INSTDIR\deckxp-icon.ico"
+  CreateShortcut "$SMPROGRAMS\DeckXP\DeckXP.lnk" "$INSTDIR\DeckXPToolbox.exe" "" "$INSTDIR\deckxp-icon.ico"
   
   CreateShortcut "$SMPROGRAMS\DeckXP\Uninstall.lnk" "$INSTDIR\Uninstall.exe" "" "$INSTDIR\deckxp-icon.ico"
 
