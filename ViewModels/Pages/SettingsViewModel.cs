@@ -24,7 +24,7 @@ namespace DeckXPToolbox.ViewModels.Pages
         private void InitializeViewModel()
         {
             CurrentTheme = ApplicationThemeManager.GetAppTheme();
-            AppVersion = $"UiDesktopApp1 - {GetAssemblyVersion()}";
+            AppVersion = $"DeckXP Toolbox - {GetAssemblyVersion()}";
 
             _isInitialized = true;
         }

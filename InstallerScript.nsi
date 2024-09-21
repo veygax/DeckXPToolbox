@@ -14,7 +14,7 @@ Section "Install"
   File /r "publish\*.*"
   File "deckxp-icon.ico"
 
-  CreateShortcut "$DESKTOP\DeckXP.lnk" "$INSTDIR\DeckXP.exe" "" "$INSTDIR\deckxp-icon.ico"
+  CreateShortcut "$DESKTOP\DeckXP.lnk" "$INSTDIR\DeckXPToolbox.exe" "" "$INSTDIR\deckxp-icon.ico"
 
   CreateDirectory "$SMPROGRAMS\DeckXP"
   CreateShortcut "$SMPROGRAMS\DeckXP\DeckXP.lnk" "$INSTDIR\DeckXP.exe" "" "$INSTDIR\deckxp-icon.ico"
