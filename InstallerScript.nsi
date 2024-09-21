@@ -2,7 +2,7 @@ OutFile "DeckXPToolbox-setup.exe"
 
 Name "DeckXP Toolbox 1.0"
 
-InstallDir "$USERPROFILE\DeckXP\Toolbox"
+InstallDir "$PROFILE\DeckXP\Toolbox"
 
 RequestExecutionLevel admin
 
