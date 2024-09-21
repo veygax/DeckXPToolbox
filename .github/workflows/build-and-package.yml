@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -31,11 +31,11 @@ jobs:
       run: dotnet publish -c Release -o ./publish
 
     - name: Install NSIS
-      run: sudo apt-get update && sudo apt-get install -y nsis
+      run: choco install nsis -y
 
     - name: Build NSIS Installer
       run: |
-        makensis installer.nsi
+        "C:\Program Files (x86)\NSIS\makensis.exe" installer.nsi
 
     - name: Upload NSIS installer artifact
       uses: actions/upload-artifact@v4
