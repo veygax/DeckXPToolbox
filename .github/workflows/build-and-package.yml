@@ -34,6 +34,7 @@ jobs:
       run: choco install nsis -y
 
     - name: Build NSIS Installer
+      shell: cmd
       run: |
         "C:\Program Files (x86)\NSIS\makensis.exe" installer.nsi
 
