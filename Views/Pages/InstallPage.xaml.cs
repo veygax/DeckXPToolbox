@@ -19,7 +19,7 @@ namespace DeckXPToolbox.Views.Pages
             InitializeComponent();
         }
 
-        private async Task InstallSteamDeckTools_Click(object sender, RoutedEventArgs e)
+        private async void InstallSteamDeckTools_Click(object sender, RoutedEventArgs e)
         {
             const string url = "https://github.com/ayufan/steam-deck-tools/releases/download/0.7.3/SteamDeckTools-0.7.3-setup.exe";
             const string fileName = "SteamDeckTools-setup.exe";
@@ -52,7 +52,7 @@ namespace DeckXPToolbox.Views.Pages
             }
         }
 
-        private async Task InstallHandheldCompanion_Click(object sender, RoutedEventArgs e)
+        private async void InstallHandheldCompanion_Click(object sender, RoutedEventArgs e)
         {
             const string url = "https://github.com/Valkirie/HandheldCompanion/releases/download/0.21.5.4/HandheldCompanion-0.21.5.4.exe";
             const string fileName = "HandheldCompanion-setup.exe";
