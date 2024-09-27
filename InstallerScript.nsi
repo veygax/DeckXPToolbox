@@ -17,7 +17,7 @@ Section "Install"
   CreateShortcut "$DESKTOP\DeckXP.lnk" "$INSTDIR\DeckXPToolbox.exe" "" "$INSTDIR\deckxp-icon.ico"
 
   CreateDirectory "$SMPROGRAMS\DeckXP"
-  CreateShortcut "$SMPROGRAMS\DeckXP\DeckXP.lnk" "$INSTDIR\DeckXP.exe" "" "$INSTDIR\deckxp-icon.ico"
+  CreateShortcut "$SMPROGRAMS\DeckXP\DeckXP.lnk" "$INSTDIR\DeckXPToolbox.exe" "" "$INSTDIR\deckxp-icon.ico"
   
   CreateShortcut "$SMPROGRAMS\DeckXP\Uninstall.lnk" "$INSTDIR\Uninstall.exe" "" "$INSTDIR\deckxp-icon.ico"
 
@@ -28,6 +28,9 @@ Section "Install"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "InstallLocation" "$INSTDIR"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "DisplayIcon" "$INSTDIR\deckxp-icon.ico"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "DisplayVersion" "1.0"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "Publisher" "VeygaX"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "HelpLink" "https://dsc.gg/veygax"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "URLInfoAbout" "https://veygax.dev"
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "NoModify" 1
   WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\DeckXP Toolbox" "NoRepair" 1
 SectionEnd
