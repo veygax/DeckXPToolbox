@@ -30,6 +30,12 @@ namespace DeckXPToolbox.ViewModels.Windows
         {
             new NavigationViewItem()
             {
+                Content = "Updates",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.ArrowClockwise24 },
+                TargetPageType = typeof(Views.Pages.UpdatesPage)
+            },
+            new NavigationViewItem()
+            {
                 Content = "Settings",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Settings24 },
                 TargetPageType = typeof(Views.Pages.SettingsPage)

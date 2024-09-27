@@ -1,0 +1,30 @@
+<Page
+    x:Class="DeckXPToolbox.Views.Pages.UpdatesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:DeckXPToolbox.Views.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:DeckXPToolbox.Models"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="DataPage"
+    d:DataContext="{d:DesignInstance local:UpdatesPage,
+                                     IsDesignTimeCreatable=False}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    ScrollViewer.CanContentScroll="False"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding UpdateMessage}" 
+                       VerticalAlignment="Center" HorizontalAlignment="Center" 
+                       TextWrapping="Wrap" Margin="20"/>
+            <Button Content="Check for Updates" Command="{Binding CheckForUpdatesCommand}" Width="150" Margin="10"/>
+            <Button Content="Install" Command="{Binding InstallCommand}" IsEnabled="{Binding IsInstallButtonEnabled}" Width="100" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Page>

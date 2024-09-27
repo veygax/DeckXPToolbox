@@ -50,6 +50,8 @@ namespace DeckXPToolbox
                 services.AddSingleton<DashboardViewModel>();
                 services.AddSingleton<InstallPage>();
                 services.AddSingleton<InstallViewModel>();
+                services.AddSingleton<UpdatesPage>();
+                services.AddSingleton<UpdatesViewModel>();
                 services.AddSingleton<SettingsPage>();
                 services.AddSingleton<SettingsViewModel>();
             }).Build();
